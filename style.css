@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+body{
+    background: #020202;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+}
+body::-webkit-scrollbar{
+    width: 5px;
+    background-color: white;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(135deg, rgb(189, 44, 68),rgb(58, 58, 235));
+
+}
+section{
+    width: 25%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-right: 7px;
+    position: fixed;
+}
+main{
+    background: linear-gradient(top, rgb(41, 40, 40), #202124);
+    display: flex;
+    width: 75%;
+    left: 25%;
+    position: relative;
+    flex-direction: column;
+}
+h2{
+    font-size: 19px;
+}
+section img{
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+section > div{
+    background-color: #1d1e202d;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px;
+}
+section .logo,
+section .home{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+section .logo img{
+    width: 45px;
+    height: 45px;
+}
+section .home{
+    gap: 2rem;
+}
+section .search{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+section .search input{
+    padding: 10px;
+    border-radius: 20px;
+    background: transparent;
+    border: 0;
+    /* outline: 1.5px solid rgba(255, 255, 255, 0.342); */
+}
+section .search input::placeholder{
+    font-size: 17px;
+    font-weight: bold;
+}
+section .plus{
+    display: flex;
+    justify-content: space-between;
+}
+section .plus > img:nth-child(2){
+    width: 12px;
+    height: 12px;
+}
+.plus .libary{
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+}
+section .playList{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(88, 88, 88, 0.164);
+    padding: 15px;
+}
+section .playList h2{
+    font-weight: 700;
+}
+
+section .playList p{
+    font-weight: 600;
+    font-size: 14px;
+}
+section .playList button{
+    width: 150px;
+    padding: 10px 5px;
+    color: black;
+    border-radius: 20px;
+    font-weight: 600;
+}
+main header{
+    background-color: #1d1e202d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+main header .arrow{
+    width: 10%;
+    display: flex;
+    gap: 1.5rem;
+}
+main header .arrow img{
+    filter: invert(0) opacity(.9);
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 20%;
+}
+main header .arrow img:nth-child(1){
+    transform: rotate(90deg);
+}
+main header .arrow img:nth-child(2){
+    transform: rotate(-90deg);
+}
+main header .search{
+    width: 50%;
+    position: relative;
+    left: 0%;
+}
+main header .search img{
+    filter: invert(1);
+    width: 30px;
+    cursor: pointer;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+main header input{
+    padding: 15px;
+    width: 100%;
+    outline: 0;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    border-radius: 20px;
+}
+main header .signUser{
+    display: flex;
+    gap: 1rem;
+}
+main header .signUser button{
+    width: 100px;
+    color: black;
+    padding: 10px 0px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+main header .signUser button:nth-child(1){
+    background-color: black;
+    color: white;
+}
+main .artists,
+main .albumStart,
+main .libaryStart{
+    padding: 20px 10px;
+}
+main .artists{
+    background: linear-gradient(rgb(66, 66, 66), black);
+}
+main .display{
+}
+main h1{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+main p{
+    font-weight: 600;
+    cursor: pointer;
+}
+main .artists .artistStart,
+main .albumStart,
+main .libaryStart{
+    display: flex;
+    justify-content: space-between;
+}
+main .artists .allArtsist,
+main .allAlbum,
+main .allLibary{
+    display: flex;
+    overflow-x: scroll;
+    gap: 2rem;
+}
+main .artists .allArtsist div,
+main .allAlbum div,
+main .allLibary div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+main .artists .allArtsist::-webkit-scrollbar,
+main .allAlbum::-webkit-scrollbar,
+main .allLibary::-webkit-scrollbar{
+    height: 0px;
+    background-color: white;
+}
+main .artists .allArtsist::-webkit-scrollbar-thumb,
+main .allAlbum::-webkit-scrollbar-thumb,
+main .allLibary::-webkit-scrollbar-thumb{
+    background: linear-gradient(135deg, rgb(189, 44, 68),rgb(58, 58, 235));
+}
+main .artists .allArtsist img,
+main .allAlbum img,
+main .allLibary img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+main .artists .allArtsist img{
+    border-radius: 50%;
+}
+
+
+
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, rgb(189, 44, 68),rgb(58, 58, 235));
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 2px 10px;
+}
+footer button{
+    padding: 0px 20px;
+    border-radius: 20px;
+    border: 0;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
