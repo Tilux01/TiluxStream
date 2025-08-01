@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleArt.css">
 </head>
 <body>
     <section>
@@ -13,18 +14,18 @@
                 <img src="images/image-removebg-preview.png" alt="">
                 <h2>TIlux Stream</p>
             </div>
-            <div class="home">
+            <div class="home" style="cursor: pointer;">
                 <img src="images/home.png" alt="">
                 <h2>Home</h2>
             </div>
             <div class="search">
                 <img src="images/search-interface-symbol.png" alt="">
-                <input type="text" placeholder="Search">
+                <input type="text" placeholder="Search for artists">
             </div>
         </div>
         <div style="padding: 0;">
-            <div class="plus" style="padding: 20px;">
-                <div class="libary">
+            <div class="plus" style="padding: 20px; cursor:pointer;" onclick="libarySection()">
+                <div class="libary" >
                     <img src="images/book.png" alt="">
                     <p>Your Libary</p>
                 </div>
@@ -45,68 +46,123 @@
     <main>
         <header>
             <div class="arrow">
-                <img src="images/down-arrow-white.png" alt="">
-                <img src="images/down-arrow-white.png" alt="">
+                <img src="images/down-arrow-white.png" alt="" onclick="back()">
+                <img src="images/down-arrow-white.png" alt="" onclick="forward()">
             </div>
             <div class="search">
-                <img src="images/search-interface-symbol.png" alt="">
-                <input type="text">
+                <img src="images/search-interface-symbol.png" alt="" id="searchSong" onclick="search()">
+                <input type="text" placeholder="search for songs" style="font-size: 15px;" id="searchForSong">
             </div>
             <div class="signUser">
                 <button>Sign up</button>
                 <button>Log in</button>
+                <div class="burger-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </header>
+        <div class="searchResultParent" style="display: none;">
+            <div class="searchResult">
+                <div class="topResult" id="topResult">
+                    <h2>Top Result</h2>
+                    <div class="topBox">
+                        <img src="images/IMG_1451.PNG" alt="">
+                        <h1>Ultraviolence</h1>
+                        <p><small>song</small> . Lanal Del Rey</p>
+                        <div><img src="images/play-buttton.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="otherSongs">
+                    <h2>Songs</h2>
+                    <div id="searchSongs" >
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="libary">
+                <div class="libaryStart">
+                    <h1>All search Result</h1>
+                </div>
+                <div class="allLibary" id="allResult">
+                    <div>
+                        <img src="images/IMG_1448.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div>
+                        <img src="images/IMG_1449.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div>
+                        <img src="images/IMG_1452.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div>
+                        <img src="images/IMG_1453.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div>
+                        <img src="images/IMG_1454.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="libary">
+                <div class="libaryStart">
+                    <h1>Artists</h1>
+                    <p>Show all</p>
+                </div>
+                <div class="allLibary" id="relatedArtist">
+                    <div>
+                        <img src="images/IMG_1448.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div>
+                        <img src="images/IMG_1449.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div>
+                        <img src="images/IMG_1452.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div>
+                        <img src="images/IMG_1453.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                    <div>
+                        <img src="images/IMG_1454.PNG" alt="">
+                        <h4>Israel</h4>
+                        <p>Artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="display">
             <div class="artists">
                 <div class="artistStart">
-                    <h1>Popular artists</h1>
-                    <p>Show all</p>
+                    <h1>Browse all</h1>
+                    <p id="browseALlCat" onclick="browseAllCat()">Show all</p>
                 </div>
-                <div class="allArtsist">
-                    <div>
-                        <img src="images/IMG_1158.JPG" alt="">
-                        <h4>Israel</h4>
-                        <p>Artist</p>
-                    </div>
-                    <div>
-                        <img src="images/IMG_0243.jpeg" alt="">
-                        <h4>Israel</h4>
-                        <p>Artist</p>
-                    </div>
-                    <div>
-                        <img src="images/IMG_1336.JPG" alt="">
-                        <h4>Israel</h4>
-                        <p>Artist</p>
-                    </div>
-                    <div>
-                        <img src="images/IMG_0247.jpeg" alt="">
-                        <h4>Israel</h4>
-                        <p>Artist</p>
-                    </div>
-                    <div>
-                        <img src="images/IMG_0593.jpeg" alt="">
-                        <h4>Israel</h4>
-                        <p>Artist</p>
-                    </div>
-                    <div>
-                        <img src="images/IMG_0875.jpeg" alt="">
-                        <h4>Israel</h4>
-                        <p>Artist</p>
-                    </div>
-                    <div>
-                        <img src="images/IMG_1232.jpeg" alt="">
-                        <h4>Israel</h4>
-                        <p>Artist</p>
-                    </div>
+                <div class="allArtsist" id="artists">
+                    
                 </div>
             </div>
             <div class="albums">
                 <div class="albumStart">
                     <h1>Popular albums</h1>
-                    <p>Show all</p>
+                    <p id="browseAllAlbum" onclick="browseAllAlbum()">Show all</p>
                 </div>
-                <div class="allAlbum">
+                <div class="allAlbum" id="topAlbumsDisplay">
                     <div>
                         <img src="images/IMG_1443.PNG" alt="">
                         <h4>Israel</h4>

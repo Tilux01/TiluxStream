@@ -9,6 +9,7 @@ body{
     background: #020202;
     width: 100%;
     height: auto;
+    overflow-x: hidden;
     min-height: 100vh;
     display: flex;
 }
@@ -133,6 +134,7 @@ main header .arrow img{
     filter: invert(0) opacity(.9);
     width: 25px;
     height: 25px;
+    cursor: pointer;
     background-color: black;
     border-radius: 20%;
 }
@@ -188,7 +190,6 @@ main .libaryStart{
     padding: 20px 10px;
 }
 main .artists{
-    background: linear-gradient(rgb(66, 66, 66), black);
 }
 main .display{
 }
@@ -211,6 +212,7 @@ main .artists .allArtsist,
 main .allAlbum,
 main .allLibary{
     display: flex;
+    overflow-x: scroll;
     overflow-x: scroll;
     gap: 2rem;
 }
@@ -268,4 +270,170 @@ footer button{
     color: black;
     font-weight: 600;
     cursor: pointer;
+}
+
+.searchResult{
+    display: flex;
+    padding: 50px 20px 40px 20px;
+    background-color: #121212;
+    background: linear-gradient(rgba(66, 66, 66, 0.527), black);
+}
+.searchResult h2{
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+.searchResult h1{
+    font-size: 30px;
+    margin-top: 15px;
+}
+.searchResult .topResult{
+    width: 40%;
+}
+.searchResult .topResult .topBox{
+    background-color: #77777725;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+.searchResult .topResult .topBox > img:nth-child(1){
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.808);
+
+}
+.searchResult .topResult .topBox div:nth-child(4){
+    width: 50px;
+    height: 50px;
+    background-color: #1ed760;
+    display: flex;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.575);
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 50%;
+}
+.searchResult .topResult .topBox div:nth-child(4) img{
+    width: 25px;
+    object-fit: cover;
+    /* height: 25px; */
+}
+.searchResult .otherSongs{
+    width: 50%;
+    margin-left: 5%;
+}
+#searchSongs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.songT{
+    display: flex;
+    padding: 5px 20px;
+    padding-left: 50px;
+    /* align-items: center; */
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.089);
+    border-radius: 10px;
+}
+.songT img{
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+.songT small{
+    font-size: 12px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+}
+.songT h2{
+    font-size: 18px;
+}
+.songT .option{
+    width: 3px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+.songT .option::after{
+    background-color: rgba(90, 90, 90, 0.226);
+    content: "";
+    z-index: -11;
+    position: absolute;
+    cursor: pointer;
+    width: 35px;
+    right: -16px;
+    border-radius: 50%;
+    top: -7px;
+    height: 35px;
+}
+.songT .option div{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+.songT small:hover{
+    text-decoration: underline;
+}
+.artistName{
+    cursor: pointer;
+}
+.smallUp{
+    font-size: 16px;
+}
+.artistName:hover{
+    text-decoration: underline !important;
+}
+@media screen and (max-width:909px) {
+    section{
+        display: none;
+        width: 100%;
+        z-index: 10000;
+        background-color: black;
+        height: 100vh;
+    }
+    main{
+        width: 100% ;
+        left: 0%;
+    }
+}
+@media screen and (max-width:451px) {
+    main .artists .allArtsist img,
+    main .allAlbum img,
+    main .allLibary img{
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    main .artists .allArtsist img{
+        border-radius: 50%;
+    }
+}
+@media screen and (max-width:412px) {
+    main .artists .allArtsist img,
+    main .allAlbum img,
+    main .allLibary img{
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    main .artists .allArtsist img{
+        border-radius: 50%;
+    }
 }
